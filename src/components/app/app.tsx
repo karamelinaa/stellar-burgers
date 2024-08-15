@@ -30,6 +30,9 @@ const App = () => {
   const dispatch: AppDispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
+  const backgroundLocation = location.state?.background;
+  const feedNumber = useMatch('/feed/:number')?.params.number;
+  const userNumber = useMatch('/profile/orders/:number')?.params.number;
 
   useEffect(() => {
     dispatch(checkAuth())
@@ -42,10 +45,6 @@ const App = () => {
   useEffect(() => {
     dispatch(getIngredients());
   }, []);
-
-  const backgroundLocation = location.state?.backgroundLocation || null;
-  const feedNumber = useMatch('/feed/:number')?.params.number;
-  const userNumber = useMatch('/profile/orders/:number')?.params.number;
 
   const closeModal = (): void => {
     navigate(-1);

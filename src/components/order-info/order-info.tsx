@@ -35,7 +35,7 @@ export const OrderInfo: FC = () => {
           if (ingredient) {
             acc[item] = {
               ...ingredient,
-              count: 1
+              count: ingredient.type === 'bun' ? 2 : 1
             };
           }
         } else {
