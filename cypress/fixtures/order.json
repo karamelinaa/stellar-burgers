@@ -1,0 +1,63 @@
+{
+  "success": true,
+  "name": "Традиционный-галактический флюоресцентный метеоритный бургер",
+  "order": {
+    "ingredients": [
+      {
+        "_id": "643d69a5c3f7b9001cfa093d",
+        "name": "Флюоресцентная булка R2-D3",
+        "type": "bun",
+        "proteins": 44,
+        "fat": 26,
+        "carbohydrates": 85,
+        "calories": 643,
+        "price": 988,
+        "image": "https://code.s3.yandex.net/react/code/bun-01.png",
+        "image_mobile": "https://code.s3.yandex.net/react/code/bun-01-mobile.png",
+        "image_large": "https://code.s3.yandex.net/react/code/bun-01-large.png",
+        "__v": 0
+      },
+      {
+        "_id": "643d69a5c3f7b9001cfa093e",
+        "name": "Филе Люминесцентного тетраодонтимформа",
+        "type": "main",
+        "proteins": 44,
+        "fat": 26,
+        "carbohydrates": 85,
+        "calories": 643,
+        "price": 988,
+        "image": "https://code.s3.yandex.net/react/code/meat-03.png",
+        "image_mobile": "https://code.s3.yandex.net/react/code/meat-03-mobile.png",
+        "image_large": "https://code.s3.yandex.net/react/code/meat-03-large.png",
+        "__v": 0
+      },
+      {
+        "_id": "643d69a5c3f7b9001cfa0942",
+        "name": "Соус Spicy-X",
+        "type": "sauce",
+        "proteins": 30,
+        "fat": 20,
+        "carbohydrates": 40,
+        "calories": 30,
+        "price": 90,
+        "image": "https://code.s3.yandex.net/react/code/sauce-02.png",
+        "image_mobile": "https://code.s3.yandex.net/react/code/sauce-02-mobile.png",
+        "image_large": "https://code.s3.yandex.net/react/code/sauce-02-large.png",
+        "__v": 0
+      }
+    ],
+    "_id": "66d1990f119d45001b502fa6",
+    "owner": {
+      "name": "Анна",
+      "email": "anya.karelina.94@bk.ru",
+      "createdAt": "2024-08-14T08:16:06.746Z",
+      "updatedAt": "2024-08-14T08:16:06.746Z"
+    },
+    "status": "done",
+    "name": "Флюоресцентный spicy люминесцентный бургер",
+    "createdAt": "2024-08-30T10:03:59.858Z",
+    "updatedAt": "2024-08-30T10:04:00.395Z",
+    "number": 51539,
+    "price": 2066
+  }
+}
