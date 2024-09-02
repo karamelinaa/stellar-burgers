@@ -20,18 +20,31 @@ afterEach(function () {
 
 describe('Тест для конструктора бургера', function () {
   it('Тест возможности добавления ингредиентов в конструктор бургеров', () => {
+    cy.get('[data-cy="constructor-item"]').should('not.exist');
     cy.get('[data-cy="ingredient-type-bun"]').contains('Добавить').click();
     cy.get('[data-cy="constructor-bun-1"]').should('be.visible');
+    cy.get('[data-cy="constructor-bun-1"]').contains('верх').should('exist');
     cy.get('[data-cy="constructor-bun-2"]').should('be.visible');
+    cy.get('[data-cy="constructor-bun-2"]').contains('низ').should('exist');
+
+    cy.get('[data-cy="constructor-item"]').should('not.exist');
     cy.get('[data-cy="ingredient-type-main"]').contains('Добавить').click();
     cy.get('[data-cy="constructor-item"]').should('be.visible');
+    cy.get('[data-cy="constructor-item"]')
+      .contains('Биокотлета')
+      .should('exist');
+
+    cy.get('[data-cy="constructor-item"]').contains('Соус').should('not.exist');
     cy.get('[data-cy="ingredient-type-sauce"]').contains('Добавить').click();
     cy.get('[data-cy="constructor-item"]').should('be.visible');
+    cy.get('[data-cy="constructor-item"]').contains('Соус').should('exist');
   });
 
   it('Тест корректности работы модальных окон', () => {
+    cy.get(modal).should('not.exist');
     cy.get('[data-id="ingredient-id-1"]').click();
     cy.get(modal).should('be.visible');
+    cy.get(modal).contains('Краторная булка').should('exist');
     cy.get('[data-cy="modal-close"]').click();
     cy.get(modal).should('not.exist');
     cy.get('[data-id="ingredient-id-1"]').click();
