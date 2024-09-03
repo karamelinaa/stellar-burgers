@@ -24,6 +24,8 @@ export const BurgerConstructor: FC = () => {
 
   const orderModalData = useSelector(selectConstructorOrder);
 
+  console.log(JSON.stringify(orderModalData));
+
   const onOrderClick = () => {
     if (!constructorItems.bun || orderRequest) return;
     if (!user) {

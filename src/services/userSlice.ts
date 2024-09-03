@@ -5,7 +5,7 @@ import {
   logoutApi,
   registerUserApi,
   updateUserApi
-} from '@api';
+} from './../utils/burger-api';
 import { deleteCookie, setCookie } from '../utils/cookie';
 import { isActionPending, isActionRejected } from '../utils/redux';
 import { RequestStatus, TUser } from './../utils/types';
@@ -16,7 +16,7 @@ export interface TUserState {
   requestStatus: RequestStatus;
 }
 
-const initialState: TUserState = {
+export const initialState: TUserState = {
   isAuth: false,
   data: null,
   requestStatus: RequestStatus.Idle
@@ -106,3 +106,4 @@ export const authCheck = userSlice.actions.authCheck;
 export const { getUser, getAuth, requestStatus } = userSlice.selectors;
 export const userSelectors = userSlice.selectors;
 export const userActions = userSlice.actions;
+export const userReducer = userSlice.reducer;
